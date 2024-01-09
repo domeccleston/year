@@ -35,8 +35,8 @@ function YearGrid({ currentDay }: { currentDay: number }) {
 
 	const days = Array.from(Array(totalDays).keys());
 	return (
-		<div className="border rounded-lg border-gray-400 px-3 pt-3 mt-10">
-			<div className="flex flex-col flex-wrap h-[120px] min-w-[848px]  items-center gap-[4px]">
+		<div className="border rounded-lg border-gray-400 pl-3 md:px-3 pt-3 mt-10">
+			<div className="flex flex-row md:flex-col flex-wrap max-w-[120px] md:h-[120px] md:min-w-[848px] md:max-w-full items-center gap-[4px]">
 				{days.map((_, i) => {
 					console.log(i < currentDay);
 					return (
@@ -60,11 +60,11 @@ export default function Home() {
 	const { week, dayOfWeek } = getWeekAndDayInYear();
 	const currentDay = getDayInYear();
 	return (
-		<div className="flex h-screen flex-col justify-center items-center">
-			<h1 className="text-7xl font-medium tracking-[-0.035em]">
+		<div className="flex min-h-screen flex-col justify-center items-center pb-4">
+			<h1 className="text-4xl md:text-7xl mt-20 md:mt-0 font-medium tracking-[-0.035em]">
 				2024 is {progress}% complete.
 			</h1>
-			<h2 className="text-2xl mt-10 text-gray-400">
+			<h2 className="text-xl md:text-2xl mt-10 text-gray-400">
 				It&apos;s week {week}, day {dayOfWeek} of 2024.
 			</h2>
 			<YearGrid currentDay={currentDay} />
