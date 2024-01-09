@@ -40,6 +40,7 @@ function YearGrid({ currentDay }: { currentDay: number }) {
 				{days.map((_, i) => {
 					return (
 						<div
+							key={`day-${i}`}
 							className={cn("h-[12px] w-[12px] rounded-sm bg-white", {
 								"bg-green-500": i < currentDay,
 							})}
@@ -62,7 +63,7 @@ export default function Home() {
 				2024 is {progress}% complete.
 			</h1>
 			<h2 className="text-2xl mt-10 text-gray-400">
-				It's week {week}, day {dayOfWeek} of 2024.
+				It&apos;s week {week}, day {dayOfWeek} of 2024.
 			</h2>
 			<YearGrid currentDay={currentDay} />
 		</div>
