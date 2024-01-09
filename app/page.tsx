@@ -35,10 +35,9 @@ function YearGrid({ currentDay }: { currentDay: number }) {
 
 	const days = Array.from(Array(totalDays).keys());
 	return (
-		<div className="border-0 md:border rounded-lg border-gray-400 pl-3 md:px-3 pt-3 mt-10 pb-3 md:pb-0">
+		<div className="border-0 md:border-2 rounded-lg border-slate-600 pl-3 md:px-3 pt-3 mt-10 pb-3 md:pb-0">
 			<div className="flex flex-row md:flex-col flex-wrap max-w-[120px] md:h-[120px] md:min-w-[848px] md:max-w-full items-center gap-[4px]">
 				{days.map((_, i) => {
-					console.log(i < currentDay);
 					return (
 						<div
 							key={`day-${i}`}
