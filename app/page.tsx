@@ -38,11 +38,13 @@ function YearGrid({ currentDay }: { currentDay: number }) {
 		<div className="border rounded-lg border-gray-400 px-3 pt-3 mt-10">
 			<div className="flex flex-col flex-wrap h-[120px] min-w-[848px]  items-center gap-[4px]">
 				{days.map((_, i) => {
+					console.log(i < currentDay);
 					return (
 						<div
 							key={`day-${i}`}
-							className={cn("h-[12px] w-[12px] rounded-sm bg-white", {
+							className={cn("h-[12px] w-[12px] rounded-sm", {
 								"bg-green-500": i < currentDay,
+								"bg-white": i >= currentDay,
 							})}
 						/>
 					);
