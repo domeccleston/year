@@ -61,7 +61,7 @@ export default function Home() {
 	const currentDay = getDayInYear();
 	return (
 		<div className="flex min-h-screen flex-col justify-center items-center pb-4">
-			<h1 className="text-4xl md:text-7xl mt-20 md:mt-0 text-white font-medium tracking-[-0.035em]">
+			<h1 className="text-3xl md:text-7xl mt-20 md:mt-0 text-white font-medium tracking-[-0.035em]">
 				2024 is {progress}% complete.
 			</h1>
 			<h2 className="text-xl md:text-2xl mt-10 text-gray-400">
