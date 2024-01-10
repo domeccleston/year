@@ -21,6 +21,8 @@ function getWeekAndDayInYear() {
 	return { week, dayOfWeek };
 }
 
+export const dynamic = 'force-dynamic';
+
 function getDayInYear() {
 	const now = new Date();
 	const start = new Date(now.getFullYear(), 0, 0);
