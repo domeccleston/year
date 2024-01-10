@@ -3,7 +3,6 @@ import cn from "classnames";
 function yearProgess() {
 	const now = new Date();
 	const start = new Date(now.getFullYear(), 0, 0).getTime();
-	const end = new Date(now.getFullYear() + 1, 0, 0).getTime();
 	const oneDay = 1000 * 60 * 60 * 24;
 	const day = Math.floor((now.getTime() - start) / oneDay);
 	const percent = Math.round((day / 365) * 100);
@@ -21,8 +20,6 @@ function getWeekAndDayInYear() {
 	return { week, dayOfWeek };
 }
 
-export const dynamic = 'force-dynamic';
-
 function getDayInYear() {
 	const now = new Date();
 	const start = new Date(now.getFullYear(), 0, 0);
@@ -31,6 +28,8 @@ function getDayInYear() {
 	const day = Math.floor(diff / oneDay);
 	return day;
 }
+
+export const dynamic = 'force-dynamic';
 
 function YearGrid({ currentDay }: { currentDay: number }) {
 	const totalDays = 366;
